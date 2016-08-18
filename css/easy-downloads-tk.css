@@ -1,0 +1,14 @@
+@charset "utf-8";
+/**
+ * Plugin Name: WooCommerce - TK Easy Download Products
+ * Plugin URI: https://github.com/typetokrish/WooCommerce-Easy-Downlod-Products
+
+/* CSS Document */
+
+#tk_ed_popup{
+	width:500px;
+}
+
+.tk_ed_form_error{ border:1px solid #F00!important;}
+#tk_ed_frm_error{ color:#F00; padding:5px 10px;}
+#tk_ed_dwnsummary{ display:block; color:#0C0; padding:10px;}
