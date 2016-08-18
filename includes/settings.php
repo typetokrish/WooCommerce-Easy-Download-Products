@@ -87,7 +87,7 @@ class TK_EasyDownloads_Settings{
 	 * Text to show as header for the settings section
 	*/
 	function plugin_section_text() {		
-		_e('Chanage your configuration for WooCommerce Easy Downalods','tk-easy-downloads');
+		_e('Chanage your configuration for WooCommerce TK Easy Downloads','tk-easy-downloads');
 	}
 	
 	/*
@@ -125,7 +125,7 @@ class TK_EasyDownloads_Settings{
 		$page			=	'tk-ed-options-page';
 		?>
 		<div class="wrap">
-        	<h2><?php _e('WooCommerce Easy Downloads Settings','tk-easy-downloads');?></h2>
+        	<h2><?php _e('WooCommerce TK Easy Downloads Settings','tk-easy-downloads');?></h2>
              <form method="post" action="options.php">  
                 <?php settings_fields($setting_group ); ?>
                 <?php do_settings_sections( $page ); ?>     

@@ -202,7 +202,7 @@ class TK_EasyDownloads_Product{
 		
 		?>
         <div class="wrap">
-        	<h2><?php _e('Download Request History','tk-easy-downloads');?></h2>
+        	<h2><?php _e('Download Request History (TK Easy Downloads)','tk-easy-downloads');?></h2>
             <div id="poststuff">
                 <div id="post-body" class="metabox-holder columns-2">
                     <div id="post-body-content">
