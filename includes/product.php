@@ -30,7 +30,14 @@ class TK_EasyDownloads_Product{
 		*/
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		add_action( 'woocommerce_single_product_summary',  array($this,'tk_ed_single_add_to_cart'), 30 );
+		
+		
+		add_filter( 'wp_mail_content_type','tk_ed_set_content_type' );
 
+	}
+	
+	function tk_ed_set_content_type(){
+		return "text/html";
 	}
 	
 	/*
@@ -169,12 +176,22 @@ class TK_EasyDownloads_Product{
 					$mail_content=get_option('tk_ed_opt_pp_mail_content',true);
 					$links='';
 					$attach=array();
-					foreach( $downloads as $key => $each_download ) {
-					  $links.= '<p><a href="'.$each_download["file"].'">Download</a></p>';
-					  $attach[]=$each_download["file"];
+					foreach( $downloads as $key => $each_download ) {						
+						$info=pathinfo($each_download["file"]);
+						$parts=explode('uploads',$info['dirname']);											
+						if(isset($parts[1])){
+							$dir=wp_upload_dir();
+							$path=$dir['basedir'].''.$parts[1].DIRECTORY_SEPARATOR.$info['basename'];
+							if(is_file($path) && file_exists($path)){
+								$attach[]=$path;
+							}							
+						}				  	
 					}
+					$from_email		=	get_option('admin_email',true);
+					$from_name		=	get_option('blogname',true);
 					$mail_content	=	str_replace('{download_links}',$links,$mail_content);
 					$mail_content	=	str_replace('{name}',$name,$mail_content);
+					$headers = 'From: '.$from_name.' <'.$from_email.'>' . "\r\n";
 					wp_mail($email,$mail_subject,$mail_content,array(),$attach);					
 					$resp['error']=0;
 					$resp['message']=get_option('tk_ed_opt_pp_success_message',true);	

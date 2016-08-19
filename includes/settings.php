@@ -101,16 +101,16 @@ class TK_EasyDownloads_Settings{
 		$field=$input;
 		if($field['type']=='text'){
 			?>
-        	<input type="text" name="<?php echo $field['key'];?>" value="<?php echo esc_attr( get_option($field['key']) ); ?>" />       
+        	<input class="form-control" type="text" name="<?php echo $field['key'];?>" value="<?php echo esc_attr( get_option($field['key']) ); ?>" />       
         	<?php
 			}elseif($field['type']=='textarea'){
 				?>				
-       			 <textarea rows="2" name="<?php echo $field['key'];?>" ><?php echo esc_attr( get_option($field['key']) ); ?></textarea>       
+       			 <textarea class="form-control" rows="2" name="<?php echo $field['key'];?>" ><?php echo esc_attr( get_option($field['key']) ); ?></textarea>       
 				<?php
 			}
 			elseif($field['type']=='checkbox'){
 				?>
-				<input type="checkbox" value="yes" name="<?php echo $field['key'];?>" <?php if( esc_attr( get_option($field['key']) )=='yes'){?> checked="checked"<?php } ?> />
+				<input type="checkbox" class="form-control" value="yes" name="<?php echo $field['key'];?>" <?php if( esc_attr( get_option($field['key']) )=='yes'){?> checked="checked"<?php } ?> />
 				<?php
 			}
 	}
