@@ -18,6 +18,8 @@ Set the product type as downloadable.
 Tick the option "Immediate Download" to activate the plugin feature for your product .
 You are done , check your store now !
 
+Demo : http://htmltosite.com/typetokrish/index.php/shop/
+
 
 
 ## Tests
@@ -27,3 +29,4 @@ This plugin has been  tested in latest wordpress version and twenty sixteen them
 ## License
 
 Opensource code which can be downloaded and customized for your needs. Enjoy !
+
