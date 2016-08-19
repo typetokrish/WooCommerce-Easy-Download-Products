@@ -5,7 +5,7 @@ This plugin allows to define immediate download option for downloadable type pro
 
 ## Why this plugin
 
-Sometimes, we may give deo or trial or brochure for our products. This need and easy download or access to the file. Here this plugin in useful. 
+Sometimes, we may give demo  or trial or brochure for our products. This need an easy download or access to the file. Here this plugin is useful. 
 
 ## Installation
 
@@ -22,8 +22,7 @@ You are done , check your store now !
 
 ## Tests
 
-This plugin has tested in latest wordpress version and twenty sixteen theme. Not tested on any premium themes along with other plugins .
-now how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+This plugin has been  tested in latest wordpress version and twenty sixteen theme. Not tested on any premium themes along with other plugins .
 
 ## License
 
