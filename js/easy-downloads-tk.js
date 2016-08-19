@@ -19,7 +19,12 @@
 //Display the download popup//
 
 function tk_ed_show_popup(id){	
-	var dynamicDialog = jQuery('<div id="tk_ed_popup">--Loading--</div>');
+	if(jQuery('#tk_ed_popup').parent().length!=0){
+		alert("Exists ex");
+		var dynamicDialog=jQuery('#tk_ed_popup');
+	}else{
+		var dynamicDialog = jQuery('<div id="tk_ed_popup">--Loading--</div>');
+	}
 	jQuery.ajax({
 		url: tk_ed_ajax.ajaxurl,
 		type:'POST',
