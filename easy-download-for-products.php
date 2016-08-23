@@ -144,10 +144,10 @@ if(is_admin()){
 	wp_enqueue_script( 'jquery-ui-position' );
 	wp_enqueue_style('tk_ed_user_css', plugin_dir_url(__FILE__) . 'css/easy-downloads-tk.css');
 	
-	$queryui = $wp_scripts->query('jquery-ui-core');
+	
     // load the jquery ui theme
-    $url = "http://ajax.googleapis.com/ajax/libs/jqueryui/".$queryui->ver."/themes/smoothness/jquery-ui.css";
-    wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
+    $url = plugin_dir_url(__FILE__)."jquery-ui/jquery-ui.css";
+    wp_enqueue_style('jquery-ui-custom', $url, false, null);
 }
 
 ?>
